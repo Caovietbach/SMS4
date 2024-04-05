@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<div align="center">
+    <h1>List of Students</h1>
+    <br/>
+    <div>
+        <form action="#" th:action="@{/searchByName}" method="post">
+            <label for="name">Enter Student Name:</label>
+            <input type="text" id="name" name="name" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <br/>
+    <a href="addStudent">Add new student information</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Student Email</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student: ${listStudents}">
+            <td th:text="${student.id}">Student ID</td>
+            <td th:text="${student.name}">Name</td>
+            <td th:text="${student.email}">Student Email</td>
+            <td>
+                <a th:href="@{'/edit/' + ${student.id}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/delete/' + ${student.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
