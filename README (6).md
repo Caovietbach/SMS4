@@ -72,9 +72,7 @@ mysql> grant all on db_studentDB.* to 'root'@'%'; (Gives all privileges to the n
 
 In the Student class, we will define attributes such as id, name, and email along with methods to add and display student information. These methods encapsulate the behavior related to student objects.
 
-```
-```
-java
+
 ```
 
 package org.example.sms4.entity;
