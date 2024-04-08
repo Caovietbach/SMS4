@@ -73,7 +73,8 @@ mysql> FLUSH PRIVILEGES;
 
 In the Student class, we will define attributes such as id, name, and email along with methods to add and display student information. These methods encapsulate the behavior related to student objects.
 
-
+``java
+``
 ```
 
 package org.example.sms4.entity;
