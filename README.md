@@ -64,9 +64,10 @@ Using your command prompt and enter these code
 Find and Open MySQL Command Line client (It should be in the MySQL folder in the second row when you click the Start button) as a user who can create new users.
 
 ``` 
-mysql> create user 'root'@'%' identified by 'ThePassword'; (Creates the user)
-mysql> grant all on db_studentDB.* to 'root'@'%'; (Gives all privileges to the new user on the newly created database)
-``` 
+mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'PASSWORD';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+mysql> FLUSH PRIVILEGES; 
+```
 
 ### Student 
 
