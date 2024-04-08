@@ -143,7 +143,8 @@ public class Student {
 ### StudentRepository
 
 The StudentRepository interface serves as a contract for accessing and managing Student entities within the application. It extends the Spring Data CrudRepository interface, inheriting basic CRUD (Create, Read, Update, Delete) operations for the Student entity. The primary responsibility of the existsByEmail method is to provide a convenient way to determine whether a student with a particular email exists in the database. This method encapsulates the logic required to execute a query to check for the existence of a student with the specified email.
-
+``java
+``
 ``` 
 package org.example.sms4.repository;
 
@@ -165,7 +166,8 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
 
 ### StudentService
 The code provided is a service class named StudentService that manages student-related operations. It is annotated with @Service in the Spring framework, indicating it is a service component. The @Transactional annotation ensures transactional context for each method. StudentService injects an instance of StudentRepository using @Autowired for database operations. It provides methods for CRUD operations on student entities: listAll(), save(), get(), and delete(). Two validation methods, validateNewInformation() and validateEditInformation(), check for empty fields and duplicate emails. These methods return error messages for validation errors.
-
+``java
+``
 ``` 
 package org.example.sms4.service;
 
@@ -246,7 +248,8 @@ public class StudentService {
         return err;
     }
 }
-``` 
+```
+
 ### StudentController
 The StudentController class in the MVC architecture handles HTTP requests for student management. It depends on StudentService for student operations. The @Controller annotation marks it as a Spring MVC controller. The mappings are:
 - @RequestMapping("/") maps the root URL to viewHomePage()
@@ -257,6 +260,8 @@ The StudentController class in the MVC architecture handles HTTP requests for st
 - @RequestMapping("/delete/{id}") maps "/delete/{id}" to deleteStudent()
 
 ```
+``java
+``
 package org.example.sms4.controller;
 
 
