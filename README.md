@@ -259,9 +259,10 @@ The StudentController class in the MVC architecture handles HTTP requests for st
 - @RequestMapping("/edit/{id}") maps "/edit/{id}" to showEditStudentPage()
 - @RequestMapping("/delete/{id}") maps "/delete/{id}" to deleteStudent()
 
-```
 ``java
 ``
+```
+
 package org.example.sms4.controller;
 
 
